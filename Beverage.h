@@ -1,12 +1,15 @@
-#ifndef __BEVERAGE_H
-#define __BEVERAGE_H
+#ifndef BEVERAGE_H
+#define BEVERAGE_H
+
+#include <QString>
 
 class Beverage {
-      protected: 
-                 char *descripiton;
-      public:
-             Beverage();
-             virtual char* getDesription();
-             virtual double cost() = 0;
-      };
+protected:
+    QString descrition;
+public:
+    Beverage();
+    virtual QString getDescription();
+    virtual double cost() = 0;
+};
+
 #endif
