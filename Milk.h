@@ -1,13 +1,14 @@
-#include "milk.h"
+#ifndef MILK_H
+#define MILK_H
 
-Milk::Milk(Beverage *b) : CondimentDecorator (b) {
+#include "beverage.h"
+#include "condimentdecorator.h"
 
-}
+class Milk : public CondimentDecorator {
+public:
+    Milk(Beverage*);
+    virtual double cost();
+    virtual QString getDescription();
+};
 
-double Milk::cost() {
-    return 15.0 + beverage->cost();
-}
-
-QString Milk::getDescription() {
-    return beverage->getDescription() + ", Milk";
-}
+#endif 
